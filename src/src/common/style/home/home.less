@@ -1,0 +1,157 @@
+@white-color:#fff;
+.container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  .header{
+    height: 60px;
+    line-height: 60px;
+    background: @activeColor;
+    box-shadow: 0 2px 2px 0 hsla(0,0%,76%,.59);
+  }
+  .logo{
+    padding: 0 20px;
+    color: @white-color;
+    width: 14%;
+    min-width: 160px;
+    border-right: 1px solid hsla(62,77%,76%,.3);
+  }
+  .tools{
+    overflow: hidden;
+    font-size: 14px;
+    width: 54px;
+    text-align: center;
+    cursor: pointer;
+    color: @white-color;
+    i{
+      display: inline-block;
+    }
+  }
+  .userinfo{
+    text-align: right;
+    padding-right:20px;
+    .userinfo-inner{
+      color: @white-color;
+      img{
+        width:40px;
+        height:40px;
+        .border-radius(50%);
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+    .el-dropdown{
+      cursor: pointer;
+    }
+  }
+  .main{
+    float: left;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    overflow: hidden;
+  }
+  //左侧菜单导航
+  .menu-expanded{
+    min-width: 160px;
+    width: 14%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: 100%;
+    z-index:999;
+    transition: all 1s;
+  }
+  .left-menu{
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    //height: calc(100vh - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: @leftMenuBg;
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    li{
+      color: @white-color;
+      .menu-tit{
+        color: @white-color;
+      }
+    }
+    .el-menu{
+      background:@leftMenuActive;
+    }
+
+    .el-menu-item:focus, .sec-menu:hover,.el-submenu__title:hover{
+      background-color:@leftMenuActive ;
+    }
+    .el-menu-item.is-active{
+      //background-color:@leftMenuBg ;
+      color:@activeColor;
+      &:hover{
+        background-color:@leftMenuActive ;
+      }
+    }
+    .el-submenu .el-menu-item{
+      min-width: 144px;
+      width: 100%;
+    }
+    .container .main aside .el-menu[data-v-51a2c380]{
+      height: 100%;
+      background: @leftMenuBg;
+    }
+  }
+
+//  中间内容
+  .content-container{
+    width: 100%;
+    //width: calc(100% - 14%);
+    height: 100%;
+    &.paddLeft{
+      padding-left: 14%;
+    }
+    .grid-content{
+      padding: 20px;
+    }
+  }
+  .el-breadcrumb{
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width:900px) and (max-width:1000px) {
+  .container .content-container.paddLeft{
+    padding-left: 17%;
+  }
+}
+@media screen and (min-width:800px) and (max-width:900px) {
+  .container .content-container.paddLeft{
+    padding-left: 16%;
+  }
+}
+@media screen and (min-width:700px) and (max-width:800px) {
+  .container .content-container.paddLeft{
+    padding-left: 20%;
+  }
+}
+@media screen and (min-width:600px) and (max-width:700px) {
+  .container .content-container.paddLeft{
+    padding-left: 24%;
+  }
+}
+@media screen and (min-width:500px) and (max-width:600px) {
+  .container .content-container.paddLeft{
+    padding-left: 29%;
+  }
+}
+@media screen and (min-width:400px) and (max-width:500px) {
+  .container .content-container.paddLeft{
+    padding-left: 37%;
+  }
+}
+@media screen and (min-width:200px) and (max-width:400px) {
+  .container .content-container.paddLeft{
+    padding-left: 44%;
+  }
+}

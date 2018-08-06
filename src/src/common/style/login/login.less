@@ -1,0 +1,80 @@
+.form-conts{
+  width: 100%;
+  height: 100%;
+  background: url("../../img/leader.jpg") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  .form-box{
+    position: relative;
+    z-index: 99;
+    width: 380px;
+    min-height: 430px;
+    margin:100px auto;
+    background: rgba(255,255,255,0.1);
+    .box-shadow(0 0 25px #cac6c6);
+    .border-radius();
+    animation:scaleTab 1s;
+    padding:0 20px;
+    .login-tit{
+      height:40px;
+      line-height: 40px;
+      vertical-align: middle;
+      border-bottom: 1px solid #c4d0da;
+      font-size: 1.6rem;
+      color: @whiteColor;
+      margin-bottom: 20px;
+    }
+    .inp-width{
+      //width: 80%;
+      margin: 0 auto 20px;
+    }
+  }
+  .forget-pass{
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    &:hover{
+      color: #fff;
+    }
+
+  }
+  .form-line{
+    text-align: center;
+    color: rgba(255,255,255,.7);
+    margin-top: 20px;
+    position: relative;
+    &:before,&:after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      background:rgba(255,255,255,.7) ;
+      width: 30px;
+      height: 1px;
+
+    }
+    &:before{
+      left: 25%;
+    }
+    &:after{
+      right: 25%;
+    }
+  }
+  .pic-check{
+    color: #f56c6c;
+    margin: 2px auto 3px;
+    visibility: hidden;
+    &.active{
+      visibility: visible;
+    }
+  }
+}
+@keyframes scaleTab {
+  from {
+    transform: scale(0,0);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
